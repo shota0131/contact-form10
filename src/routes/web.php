@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [ContactController::class, 'index']);
+Route::post('/confirm.edit', [ContactController::class, 'edit']);
+Route::post('/confirm.update', [ContactController::class, 'update']);
+Route::post('/', [ContactController::class, 'store']);
+Route::post('/confirm', [ContactController::class, 'confirm']);
+Route::post('/store', [ContactController::class, 'store']);
+Route::get('/thanks', function(){
+    return view('thanks');
 });
+
+
+Route::get('/login', function(){
+    return view('login');
+});
+Route::post('/login', [LoginController::class, 'login']);
+
+Route::middleware('auth', 'admin')->group(function () {
+    Route::get('/admin', [AdminController::class, 'index']);
+    Route::get('/contacts/{id}', [AdminContactController::class, 'show'])->name('contacts.show');
+    Route::get('/contacts/export', [AdminContactController::class, 'export'])->name('contacts.export');
+});
+
+
+
