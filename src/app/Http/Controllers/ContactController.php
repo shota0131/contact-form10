@@ -8,9 +8,9 @@ use App\Models\Contact;
 
 class ContactController extends Controller
 {
-    public function index()
+    public function contact()
     {
-        return view('index');
+        return view('contact');
     }
 
     public function edit(ContactRequest $request)

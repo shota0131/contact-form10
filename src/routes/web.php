@@ -16,7 +16,7 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/', [ContactController::class, 'index']);
+Route::get('/', [ContactController::class, 'contact']);
 Route::post('/confirm.edit', [ContactController::class, 'edit']);
 Route::post('/confirm.update', [ContactController::class, 'update']);
 Route::post('/', [ContactController::class, 'store']);

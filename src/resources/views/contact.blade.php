@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FashionablyLate</title>
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-</head>
-<body>
-    <header class="header">
-        <div class="header__inner">
-            <div class="header__logo">
-                FashionablyLate
-            </div>
-        </div>
-    </header>
+@extends('layouts.app')
 
-    <main>
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/contact.css')}}">
+@endsection
+
+@section('content')
+<div class="contact-form">
+    <h2 class="contact-form_heading content_heading">Contact</h2>
         <div class="contact-form__content">
             <div class="contact-form__heading">
                 <h2>Contact</h2>

@@ -1,0 +1,6 @@
+.form__group {
+    display: grid;
+    align-items: center;
+    margin-top: 32px;
+
+    grid-template-columns: 1fr 2fr; }
