@@ -18,7 +18,7 @@ class CreateContactsTable extends Migration
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->string('first_name');
             $table->string('last_name');
-            $table->enum('gender', 'male', 'female', 'non-binary');
+            $table->enum("gender", ["male", "female", "non-binary"]);
             $table->string('email');
             $table->int('tel');
             $table->string('address');
