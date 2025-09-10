@@ -22,39 +22,57 @@ class ContactRequest extends FormRequest
      * @return array
      */
     public function rules()
-    {
+    {          
         return [
-            'first_name'=>['required', 'string', 'max:255'],
-            'last_name'=>['required','string', 'max:255'],
-            'gender'=>['required','in:男性,女性,その他'],
-            'email'=>['required','email'],
-            'tel1'=>['required', 'digits_between:1,5', 'numeric'],
-            'tel2'=>['required', 'digits_between:1,5', 'numeric'],
-            'tel3'=>['required', 'digits_between:1,5', 'numeric'],
-            'address'=>['required', 'string', 'max:255'],
-            'building'=>['string', 'max:255'],
-            'type'=>['required', 'in:商品のお届けについて,商品の交換について,商品トラブル,ショップへのお問い合わせ,その他'],
-            'content'=>['required','max:120']
+            'name' => ['required', 'string', 'max:255',],
+
+            'email' => ['required', 'email', 'regex:/^[^@\s]+@[^@\s]+\.[^@\s]+$/'],
+
+            'password' => ['required', 'string','min:6',],
+
+            'current_weight'=>['required', 'numeric', 'max:9999.9', 'regex:/^\d{1,4}(\.\d{1})?$/',],
+
+            'goal_weight'=> ['required', 'numeric','max:9999.9', 'regex:/^\d{1,4}(\.\d{1})?$/',],
+
+            'log_date' => ['required', 'date',],
+
+            'weight' => ['required', 'numeric', 'max:9999.9', 'regex:/^\d{1,4}(\.\d{1})?$/',],
+
+            'calories' => ['required', 'numeric',],
+
+            'exercise_time' => ['required', 'string',],
+
+            'exercise_content' => ['nullable', 'string', 'max:120',],
         ];
     }
 
     public function messages()
     {
         return[
-            'first_name.required'=>'姓を入力してください',
-            'last_name.required'=>'名を入力してください',
-            'gender.required.'=>'性別を選択してください',
-            'email.required'=>'メールアドレスを入力してください',
-            'email.email'=>'メールアドレスはメール形式で入力してください',
-            'tel.required'=>'電話番号を入力してください',
-            'tel1.digits_between:1,5'=>'電話番号は5桁までの数字で入力してください',
-            'tel2.digits_between:1,5'=>'電話番号は5桁までの数字で入力してください',
-            'tel3.digits_between:1,5'=>'電話番号は5桁までの数字で入力してください',
-            'address.required'=>'住所を入力してください',
-            'type.required'=>'お問い合わせの種類を選択してください',
-            'content.required'=>'お問い合わせ内容を入力してください',
-            'content.max:120'=>'お問い合わせ内容は120文字以内で入力してください',
-
+            'name.required' => '名前を入力してください',
+            'email.required' => 'メールアドレスを入力してください',
+            'email.email' => 'メールアドレスは「ユーザー名＠ドメイン」形式で入力してください',
+            'email.regex' => 'メールアドレスは「ユーザー名＠ドメイン」形式で入力してください',
+            'password.required' => 'パスワードを入力してください',
+            'current_weight.required' => '現在の体重を入力してください',
+            'current_weight.numeric' => '数字で入力してください',
+            'current_weight.max' => '4桁までの数字で入力してください',
+            'current_weight.regex' => '小数点は1桁で入力してください',
+            'goal_weight.required' => '目標の体重を入力してください',
+            'goal_weight.numeric' => '数字で入力してください',
+            'goal_weight.max' => '4桁までの数字で入力してください',
+            'goal_weight.regex' => '小数点は1桁で入力してください',
+            'log_date.required' => '日付を入力してください',
+            'weight.required' => '体重を入力してください',
+            'weight.numeric' => '数字で入力してください',
+            'weight.regex' => '4桁までの数字で、小数点は1桁で入力してください',
+            'calories.required' => '摂取カロリーを入力してください',
+            'calories.integer' => '数字で入力してください',
+            'exercise_time.required' => '運動時間を入力してください',
+            'exercise_time.date_format' => '有効な形式で運動時間を入力してください（例: 01:30）',
+            'exercise_content.max' => '120文字以内で入力してください'
         ];
     }
+
+
 }

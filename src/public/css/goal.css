@@ -1,0 +1,71 @@
+.goal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100px;
+    text-align: right;
+}
+
+.form-group .unit {
+    margin-left: 8px;
+    font-size: 16px;
+    color: #444;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn.back {
+    background: #f2f2f2;
+    color: #333;
+}
+
+.btn.update {
+    background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+    color: #fff;
+}

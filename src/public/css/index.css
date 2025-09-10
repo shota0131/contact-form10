@@ -1,0 +1,132 @@
+/* public/css/admin.css */
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #d48fd2;
+}
+
+.header-actions .btn {
+    margin-left: 10px;
+}
+
+.btn {
+    background: #f0f0f0;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #e0e0e0;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.summary-box {
+    flex: 1;
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 0 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.summary-box p {
+    font-size: 14px;
+    color: #777;
+}
+
+.summary-box h2 {
+    font-size: 28px;
+    margin: 6px 0 0;
+}
+
+.search-form {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.search-form input {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.data-table {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.data-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    font-size: 14px;
+}
+
+.btn-add {
+    background: linear-gradient(90deg, #d48fd2, #f0a6e8);
+    color: white;
+    font-weight: bold;
+}
+
+.btn-add:hover {
+    opacity: 0.9;
+}
+
+.edit-icon {
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}

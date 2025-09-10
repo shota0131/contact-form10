@@ -1,0 +1,109 @@
+body {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff6f61;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #ff6f61;
+    outline: none;
+}
+
+.error-message {
+    color: #e3342f;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.register-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #ff9a9e 0%, #fecfef 100%);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(254, 207, 239, 0.7);
+}
+
+.register-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(254, 207, 239, 0.8);
+}
+
+.login-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.login-link:hover {
+    color: #ff6f61;
+    text-decoration: underline;
+}

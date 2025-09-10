@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\LoginController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,27 +15,30 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/', [ContactController::class, 'contact']);
-Route::post('/confirm.edit', [ContactController::class, 'edit']);
-Route::post('/confirm.update', [ContactController::class, 'update']);
-Route::post('/', [ContactController::class, 'store']);
-Route::post('/confirm', [ContactController::class, 'confirm']);
-Route::post('/store', [ContactController::class, 'store']);
-Route::get('/thanks', function(){
-    return view('thanks');
-});
+Route::get('/weight_logs', [ContactController::class, 'index'])->name('weight_logs.index');
 
+Route::get('/weight_logs/create', [ContactController::class, 'create'])->name('weight_logs.create');
+Route::post('/weight_logs/create', [ContactController::class, 'store'])->name('weight_logs.store');
 
-Route::get('/login', function(){
-    return view('login');
-});
-Route::post('/login', [LoginController::class, 'login']);
+Route::get('/weight_logs/search', [ContactController::class, 'search'])->name('weight_logs.search');
 
-Route::middleware('auth', 'admin')->group(function () {
-    Route::get('/admin', [AdminController::class, 'index']);
-    Route::get('/contacts/{id}', [AdminContactController::class, 'show'])->name('contacts.show');
-    Route::get('/contacts/export', [AdminContactController::class, 'export'])->name('contacts.export');
-});
+Route::get('/weight_logs/{weightLogId}', [ContactController::class, 'show'])->name('weight_logs.show');
 
+Route::get('/weight_logs/{weightLogId}/update', [ContactController::class, 'edit'])->name('weight_logs.edit');
+Route::post('/weight_logs/{weightLogId}/update', [ContactController::class, 'update'])->name('weight_logs.update');
 
+Route::delete('/weight_logs/{weightLogId}/delete', [ContactController::class, 'destroy'])->name('weight_logs.destroy');
 
+Route::get('/weight_logs/goal_setting', [ContactController::class, 'editGoal'])->name('goal.edit');
+Route::post('/weight_logs/goal_setting', [ContactController::class, 'updateGoal'])->name('goal.update');
+
+Route::get('/register/step1', [ContactController::class, 'showStep1'])->name('register.step1');
+Route::post('/register/step1', [ContactController::class, 'storeStep1'])->name('register.storeStep1');
+
+Route::get('/register/step2', [ContactController::class, 'showStep2'])->name('register.step2');
+Route::post('/register/step2', [ContactController::class, 'storeStep2'])->name('register.storeStep2');
+
+Route::get('/login', [ContactController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [ContactController::class, 'login'])->name('login.post');
+
+Route::get('/logout', [ContactController::class, 'logout'])->name('logout');

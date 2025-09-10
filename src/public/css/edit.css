@@ -1,0 +1,82 @@
+.edit-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn.back {
+    background: #f2f2f2;
+    color: #333;
+}
+
+.btn.update {
+    background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+    color: #fff;
+}
+
+.btn.delete {
+    background: none;
+    color: #d9534f;
+    font-size: 18px;
+}

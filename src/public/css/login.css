@@ -1,0 +1,109 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to right, #f6d365, #fda085);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #d16ba5;
+    margin-bottom: 10px;
+}
+
+
+.title {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #fda085;
+    outline: none;
+}
+
+
+.error-message {
+    display: block;
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #f6d365, #fda085);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.login-button:hover {
+    opacity: 0.9;
+}
+
+.register-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #d16ba5;
+    transition: color 0.3s;
+}
+
+.register-link:hover {
+    color: #a83279;
+}

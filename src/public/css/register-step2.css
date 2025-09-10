@@ -1,0 +1,96 @@
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    color: #d16ba5;
+    margin-bottom: 10px;
+}
+
+
+.title {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-group input {
+    width: calc(100% - 40px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.form-group input:focus {
+    border-color: #f78ca0;
+    outline: none;
+}
+
+.form-actions {
+    margin-top: 25px;
+}
+
+.register-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #a18cd1, #fbc2eb);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.register-button:hover {
+    opacity: 0.9;
+}

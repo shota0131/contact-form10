@@ -3,53 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FashionableLate</title>
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
+    <title>PiGly - ログイン</title>
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
 <body>
-    <div class="login-form__content">
-        <div class="login-form__heading">
-            <h2>Login</h2>
-        </div>
-        <form class="form" action="{{ route('login') }}" method="POST">
-            @csrf
-            <div class="form__group">
-                <div class="form__group-title">
-                    <span class="form__label--item">メールアドレス</span>
+    <div class="container">
+        <div class="card">
+            <h1 class="logo">PiGly</h1>
+            <h2 class="title">ログイン</h2>
+
+            <form method="POST" action="{{ route('login') }}">
+                @csrf 
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="メールアドレスを入力">
+                    @error('email')
+                        <span class="error-message">{{ $message }}</span>
+                    @enderror
                 </div>
-                <div class="form__group-content">
-                    <div class="form__input--text">
-                        <input type="email" name="email" value="{{ old('email') }}" placeholder="例：test@example.com" />
-                    </div>
-                    <div class="form__error">
-                        @error('email')
-                        {{ $message }}
-                        @enderror
-                    </div>
+
+                <div class="form-group">
+                    <label for="password">"パスワード"</label>
+                    <input type="password" id="password" name="password" value="{{ old('password') }}" placeholder="パスワードを入力">
+                    @error('password')
+                        <span class="error-message">{{ $message }}</span>
+                    @enderror
                 </div>
-            </div>
-            <div class="form__group">
-                <div class="form__group-title">
-                    <span class="form__label--item">パスワード</span>
+
+                <div class="form-actions">
+                    <button type="submit" class="login-button">ログイン</button>
                 </div>
-                <div class="form__group-content">
-                    <div class="form__input--text">
-                        <input type="password" name="password"  placeholder="例：coachtech1106"/>
-                    </div>
-                    <div class="form__error">
-                        @error('password')
-                        {{ $message }}
-                        @enderror
-                    </div>
-                </div>
-            </div>
-            <div class="form__button">
-                <button class="form__button-submit" type="submit">ログイン</button>
-            </div>
-        </form>
-        <div class="register__link">
-            <a class="register__button-submit" href="/register">会員登録の方はこちら</a>
+            </form>
+
+            <a href="{{ route('register.step1')}}" class="register-link">アカウント作成はこちら</a>
         </div>
     </div>
 </body>
